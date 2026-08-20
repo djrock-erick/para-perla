@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>✨ Para ti, Perla ✨</title>
+  
+  <!-- Fuentes: Tipografía principal limpia + Tipografía manuscrita de lujo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Partículas y estrellas flotantes -->
+  <div class="particles-container" id="particles"></div>
+
+  <!-- Contenedor principal móvil -->
+  <main class="mobile-wrapper">
+    
+    <!-- VISTA PRINCIPAL / CARTA SECRETA -->
+    <section id="hero-view" class="view-active">
+      
+      <!-- Secuencia de Introducción Personalizada -->
+      <div class="intro-sequence">
+        <span class="intro-to">PARA TI,</span>
+        
+        <div class="name-container">
+          <div class="glow-light-behind"></div> <span class="sparkle-symbolmono">🙈</span></h1>
+          <h1 class="custom-name">Perla Lopez <span class="sparkle-symbol">✦</span></h1>
+          
+          <!-- Línea animada manuscrita / firma -->
+          <svg class="handwritten-line" viewBox="0 0 250 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12 C 40 16, 90 6, 135 11 C 180 16, 215 8, 245 10" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#FFD6E2" stop-opacity="0.2"/>
+                <stop offset="50%" stop-color="#FF4F81" stop-opacity="1"/>
+                <stop offset="100%" stop-color="#FFD166" stop-opacity="0.8"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <p class="intro-whisper">sí, tú... no mires a otro lado 👀</p>
+      </div>
+
+      <!-- Revelación del Mensaje y Propuesta -->
+      <div class="reveal-content">
+        <header class="hero-banner">
+          <span class="badge-subtitle">✦ tengo una pregunta  </span>
+          <h2 class="main-title">
+            ¿Te gustaría tener una cita <span class="highlight-pink">con este Gremlin?</span> <span class="heart-icon">💕</span>
+          </h2>
+          <p class="hero-subtext">
+            Prometo que conoceremos un lugar nuevo , risas inesperadas y al menos una historia que contar después. ✨
+          </p>
+        </header>
+
+        <!-- Tarjeta Flotante Glassmorphism -->
+        <section class="glass-card">
+          <h3 class="card-title">Tengo un pequeño plan...</h3>
+          <p class="card-desc">
+            Tú + yo + un lugar bonito + algo delicioso y astetic.<br>
+            El resto prefiero descubrirlo contigo. 🥰
+          </p>
+
+          <!-- Opciones visuales -->
+          <div class="plan-pills">
+            <div class="pill"><span>🍕</span> Algo rico</div>
+            <div class="pill"><span>🌙</span> Un lugar bonito</div>
+            <div class="pill"><span>😂</span> Muchas risas</div>
+          </div>
+
+          <!-- Botones de Acción -->
+          <div class="actions-container">
+            <button type="button" id="btn-yes" class="btn-primary">
+              <span>¡Sí, acepto Jalo 1000! 💕</span>
+            </button>
+            
+            <button type="button" id="btn-no" class="btn-secondary">
+              <span>Déjame pensarlo... 🤔</span>
+            </button>
+          </div>
+
+          <p id="fun-hint" class="fun-hint"></p>
+        </section>
+      </div>
+
+    </section>
+
+    <!-- VISTA DE ÉXITO Y FORMULARIO -->
+    <section id="success-view" class="view-hidden">
+      <div class="glass-card success-card">
+        <div class="success-icon">🙉🙊</div>
+        <h2 class="success-title">¡Sabía que dirías que sí! 😏💕</h2>
+        <p class="card-desc">
+          Plan perfecto en marcha, Bonita. Ayúdame con los siguentes detalles:
+        </p>
+
+        <form id="date-form" action="https://formspree.io/f/xaewaave" method="POST">
+          <input type="hidden" name="Respuesta" value="¡Perla aceptó la cita! 💕" />
+          
+          <div class="form-group">
+            <label for="comida">¿Qué se te antoja más comer?</label>
+            <select id="comida" name="antojo_comida" class="input-field">
+              <option value="Italiana / Pizza">🍕 Pizza o 🍝Pasta deliciosa</option>
+              <option value="Hamburguesas / Casual">🥩 Cortes de carne / 🌮Tacos</option>
+              <option value="Café y Postre">☕ Café, 🍕 Pizza</option>
+              <option value="Sorpresa">✨ Sorpréndeme por completo</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="dia">¿Qué día te queda mejor?</label>
+            <select id="dia" name="dia_preferido" class="input-field">
+              <option value="Viernes por la noche">🌙 Martes por la tarde/noche </option>
+              <option value="Sábado">✨ Miercoles por la tarde/noche</option>
+              <option value="Domingo tranquilo">☀️ Viernes relajado 🍻</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="nota">¿Algún antojo o detalle en especial?</label>
+            <input type="text" id="nota" name="nota_especial" placeholder="Ej: En el trayecto no pongas al Bogueto..." class="input-field" />
+          </div>
+
+          <button type="submit" id="btn-submit" class="btn-primary full-width">
+            <span>Enviar respuesta al buzón 💌</span>
+          </button>
+          
+          <p id="submit-status" class="status-msg"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
